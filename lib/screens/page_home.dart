@@ -24,6 +24,7 @@ class _PageHomeState extends State<PageHome> {
               fontFamily: "DancingScript"),
         ),
         actions: [
+          //appBar==============================================================
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -54,6 +55,7 @@ class _PageHomeState extends State<PageHome> {
           ),
         ],
       ),
+      //========================================================================
       body: ListView(
         children: [
           Container(
@@ -62,7 +64,7 @@ class _PageHomeState extends State<PageHome> {
               padding: EdgeInsets.only(
                   right: width * 0.05,
                   left: width * 0.05,
-                  bottom: height * 0.03),
+                  bottom: height * 0.01),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -78,7 +80,7 @@ class _PageHomeState extends State<PageHome> {
                         width: width * 0.05,
                       ),
                       Container(
-                        height: height * 0.06,
+                        height: height * 0.05,
                         width: width * 0.6,
                         child: TextButton(
                           style: ButtonStyle(
@@ -104,11 +106,40 @@ class _PageHomeState extends State<PageHome> {
                       ),
                     ],
                   ),
+                  Divider(
+                    color: Colors.grey,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: width * 0.1),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(
+                          Icons.videocam,
+                          color: Colors.red,
+                        ),
+                        VerticalDivider(
+                          color: Colors.grey,
+                        ),
+                        Icon(
+                          Icons.photo,
+                          color: Colors.green,
+                        ),
+                        VerticalDivider(
+                          color: Colors.grey,
+                        ),
+                        Icon(
+                          Icons.video_call,
+                          color: Colors.purple,
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
           ),
-
+          //====================================================================
           Padding(
             padding: EdgeInsets.only(top: height * 0.01),
             child: Container(
@@ -142,12 +173,7 @@ class _PageHomeState extends State<PageHome> {
           SizedBox(
             height: height * 0.01,
           ),
-          //posts====================================================================
-          /*  Container(
-            
-            width: width,
-            height: height * 0.55,
-            child: */
+          //posts===============================================================
           ListView.builder(
             physics: ScrollPhysics(), // important---------
             shrinkWrap: true, //important----------
