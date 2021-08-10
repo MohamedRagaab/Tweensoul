@@ -104,20 +104,25 @@ class _PageFriendsState extends State<PageFriends> {
                       width: width * 0.04,
                     ),
                     Column(
+                      //feen nhayto
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Text(
-                              "Mohamed Ragab",
-                              style: TextStyle(fontSize: width * 0.04),
-                            ),
-                            Text(
-                              "1 d",
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                          ],
+                        Container(
+                          // estana kkk 3azama peace
+                          width: width * 0.7,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Mohamed Ragab ",
+                                style: TextStyle(fontSize: width * 0.04),
+                              ),
+                              Text(
+                                "1 d",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ],
+                          ),
                         ),
                         SizedBox(
                           //da el size elle kont btgrabo ?
