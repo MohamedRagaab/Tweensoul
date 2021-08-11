@@ -80,7 +80,7 @@ class _PageHomeState extends State<PageHome> {
                         width: width * 0.05,
                       ),
                       Container(
-                        height: height * 0.05,
+                        height: 40,
                         width: width * 0.6,
                         child: TextButton(
                           style: ButtonStyle(
@@ -143,28 +143,45 @@ class _PageHomeState extends State<PageHome> {
           Padding(
             padding: EdgeInsets.only(top: height * 0.01),
             child: Container(
+              padding: EdgeInsets.only(right: 10),
               color: Theme.of(context).accentColor,
-              height: height * 0.18,
+              height: 160,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 5,
                 itemBuilder: (BuildContext context, index) {
-                  return Row(
-                    children: [
-                      SizedBox(
-                        width: width * 0.01,
-                      ),
-                      Container(
-                        width: width * 0.4,
-                        padding: EdgeInsets.symmetric(vertical: height * 0.015),
-                        child: ClipRRect(
+                  return Container(
+                    width: width * 0.31,
+                    height: 160,
+                    padding: EdgeInsets.only(left: 10, top: 5, bottom: 5),
+                    child: Stack(
+                      children: [
+                        Container(
+                          width: width * 0.31,
+                          height: 150,
+                          child: ClipRRect(
                             borderRadius: BorderRadius.all(Radius.circular(20)),
-                            child: Image.asset("assets/img/p1.jpg")),
-                      ),
-                      SizedBox(
-                        width: width * 0.01,
-                      ),
-                    ],
+                            child: Image.asset(
+                              "assets/img/p1.jpg",
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CircleAvatar(
+                            backgroundImage: AssetImage("assets/img/p2.jpg"),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomLeft,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Mohamed Ragab"),
+                          ),
+                        ),
+                      ],
+                    ),
                   );
                 },
               ),
