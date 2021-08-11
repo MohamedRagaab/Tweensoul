@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:socialapp/screens/widgets/post_widget.dart';
 
 class PageHome extends StatefulWidget {
   const PageHome({Key? key}) : super(key: key);
@@ -196,157 +197,15 @@ class _PageHomeState extends State<PageHome> {
             shrinkWrap: true, //important----------
             itemCount: 5,
             itemBuilder: (BuildContext context, index) {
-              return Padding(
-                padding: EdgeInsets.only(bottom: height * 0.01),
-                child: Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).accentColor,
-                      ),
-                      padding: EdgeInsets.only(
-                        top: height * 0.01,
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundImage:
-                                          AssetImage("assets/img/me.jpg"),
-                                    ),
-                                    SizedBox(
-                                      width: width * 0.02,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "Mohamed Ragab",
-                                          style: TextStyle(fontSize: 15),
-                                        ),
-                                        Row(
-                                          children: [
-                                            Text(
-                                              "10 m .",
-                                              style:
-                                                  TextStyle(color: Colors.grey),
-                                            ),
-                                            Icon(
-                                              Icons.public,
-                                            )
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(right: width * 0.02),
-                                child: Icon(
-                                  Icons.more_horiz,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text("beautiful nature :)"),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: height * 0.01,
-                          ),
-                          Image.asset(
-                            "assets/img/post.jpg",
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("10 likes"),
-                                Row(
-                                  children: [
-                                    Text("30 Comments. "),
-                                    Text("7 Shares"),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsets.symmetric(horizontal: width * 0.015),
-                            child: Divider(
-                              color: Colors.grey,
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsets.symmetric(horizontal: width * 0.015),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Icon(Icons.thumb_up),
-                                    SizedBox(
-                                      width: width * 0.01,
-                                    ),
-                                    Text("Like"),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: width * 0.1,
-                                ),
-                                Row(
-                                  children: [
-                                    Icon(Icons.comment),
-                                    SizedBox(
-                                      width: width * 0.01,
-                                    ),
-                                    Text("Comment"),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: width * 0.1,
-                                ),
-                                Row(
-                                  children: [
-                                    Icon(Icons.shortcut_outlined),
-                                    SizedBox(
-                                      width: width * 0.01,
-                                    ),
-                                    Text("Share"),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsets.symmetric(horizontal: width * 0.015),
-                            child: Divider(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+              return PostWidget(
+                likes: 20,
+                comments: 30,
+                shares: 12,
+                posterImg: "assets/img/post.jpg",
+                profileImg: "assets/img/me.jpg",
+                profilename: "Mohamed Ragab",
+                time: "10 m",
+                postText: "beautiful nature :)",
               );
             },
           ),

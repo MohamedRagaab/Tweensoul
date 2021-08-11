@@ -13,7 +13,9 @@ class _PageFriendsState extends State<PageFriends> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: Color(0xFF232935),
       appBar: AppBar(
+        elevation: 0,
         title: Text("Friends"),
         centerTitle: true,
       ),
@@ -148,7 +150,7 @@ class _PageFriendsState extends State<PageFriends> {
                             TextButton(
                               style: ButtonStyle(
                                   backgroundColor: MaterialStateProperty.all(
-                                      Theme.of(context).accentColor),
+                                      Colors.blue[800]),
                                   shape: MaterialStateProperty.all(
                                       RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(
