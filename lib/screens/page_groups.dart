@@ -59,20 +59,7 @@ class PageGroup extends StatelessWidget {
                 SizedBox(
                   width: width * 0.02,
                 ),
-                TextButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.grey),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)))),
-                  onPressed: () {},
-                  child: Row(
-                    children: [
-                      Icon(Icons.mark_email_unread),
-                      SizedBox(width: width * 0.01),
-                      Text("Invitations"),
-                    ],
-                  ),
-                ),
+                TextButtonWidget(width: width * 0.01, name: "Invitations"),
               ],
             ),
           ),
@@ -100,7 +87,6 @@ class PageGroup extends StatelessWidget {
             height: height * 0.01,
           ),
           Container(
-            color: Color(0xFF232935),
             child: ListView.builder(
                 shrinkWrap: true,
                 physics: ScrollPhysics(),

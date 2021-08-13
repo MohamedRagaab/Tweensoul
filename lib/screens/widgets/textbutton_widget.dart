@@ -5,7 +5,6 @@ class TextButtonWidget extends StatelessWidget {
 
   final double width;
   final String name;
-
   TextButtonWidget({required this.width, required this.name});
 
   @override
